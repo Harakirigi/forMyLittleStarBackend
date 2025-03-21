@@ -11,7 +11,10 @@ const PORT = process.env.PORT || 3000;
 const starRoutes = require("./routes/starRoutes");
 
 // App use
-app.use(cors())
+app.use(cors({
+    origin: 'https://for-my-little-star.vercel.app',
+}));
+app.options('*', cors());
 app.use(express.json());
 app.use(express.static(path.join(__dirname, "dist")));
 app.use("/star", starRoutes);
