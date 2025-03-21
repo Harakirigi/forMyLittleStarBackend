@@ -7,7 +7,7 @@ require('dotenv').config();
 
 // Global variables
 const app = express();
-const PORT = process.env.PORT;
+const PORT = process.env.PORT || 3000;
 const starRoutes = require("./routes/starRoutes");
 
 // App use
@@ -37,5 +37,5 @@ app.get("*", (req, res) => {
 });
 
 app.listen(PORT, () => {
-  console.log(`Server is running on http://localhost:${PORT}`);
+    console.log(`Server is running on port ${PORT}`);
 });
