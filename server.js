@@ -11,11 +11,7 @@ const PORT = process.env.PORT || 3000;
 const starRoutes = require("./routes/starRoutes");
 
 // App use
-app.use(cors({
-    origin: 'https://for-my-little-star.vercel.app',
-}));
-res.setHeader('Access-Control-Allow-Origin', '*');
-app.options('*', cors());
+app.use(cors())
 app.use(express.json());
 app.use(express.static(path.join(__dirname, "dist")));
 app.use("/star", starRoutes);
@@ -43,3 +39,5 @@ app.get("*", (req, res) => {
 app.listen(PORT, () => {
     console.log(`Server is running on port ${PORT}`);
 });
+
+module.exports = app;
