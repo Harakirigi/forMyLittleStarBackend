@@ -14,6 +14,7 @@ const starRoutes = require("./routes/starRoutes");
 app.use(cors({
     origin: 'https://for-my-little-star.vercel.app',
 }));
+res.setHeader('Access-Control-Allow-Origin', '*');
 app.options('*', cors());
 app.use(express.json());
 app.use(express.static(path.join(__dirname, "dist")));
