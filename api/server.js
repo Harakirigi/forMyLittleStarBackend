@@ -6,7 +6,7 @@ require('dotenv').config();
 
 // Global variables
 const app = express();
-const starRoutes = require("./routes/starRoutes");
+const starRoutes = require("./starRoutes");
 
 // App use
 app.use(cors());
