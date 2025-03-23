@@ -6,7 +6,7 @@ require('dotenv').config();
 
 // Global variables
 const app = express();
-const starRoutes = require("./api/starRoutes");
+const starRoutes = require("./routes/starRoutes");
 const PORT = process.env.PORT || 3005;
 
 // App use

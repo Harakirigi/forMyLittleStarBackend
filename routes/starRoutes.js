@@ -5,7 +5,6 @@ const Question = require("../models/Question");
 const Answer = require("../models/Answer");
 const Choice = require("../models/Choice")
 const mongoose = require("../models/dataBase")
-const { validNames } = require("../../FRONTEND/src/utils/arrays");
 
 
 
