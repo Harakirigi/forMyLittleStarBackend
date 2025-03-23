@@ -6,7 +6,8 @@ require('dotenv').config();
 
 // Global variables
 const app = express();
-const starRoutes = require("./starRoutes");
+const starRoutes = require("./api/starRoutes");
+const PORT = process.env.PORT || 3005;
 
 // App use
 app.use(cors());
@@ -19,4 +20,6 @@ app.get("/", (req, res) => {
     res.send("Hello from Backend!");
 });
 
-module.exports = app;
+app.listen(PORT, () => {
+    console.log(`Server is running on port ${PORT}`);
+});
