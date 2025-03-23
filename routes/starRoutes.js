@@ -203,7 +203,7 @@ router.put("/:starId", async (req, res) => {
             { name },
             { new: true }
         );
-        if (!updatedStar) return res.status(404).json({ message: "Звездочка не найдена" });
+        if (!updatedStar) return res.status(404).json({ message: "Star not found" });
         return res.json(updatedStar);
     } catch (error) {
         return res.status(500).json({ error: error.message });
