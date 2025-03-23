@@ -2,12 +2,10 @@
 const express = require("express");
 const path = require("path");
 const cors = require("cors")
-const bodyParser = require("body-parser");
 require('dotenv').config();
 
 // Global variables
 const app = express();
-const PORT = process.env.PORT || 3000;
 const starRoutes = require("./routes/starRoutes");
 
 // App use
@@ -29,6 +27,4 @@ app.get("/", (req, res) => {
     res.send("Hello from Backend!");
 });
 
-app.listen(PORT, () => {console.log("SERVER CONNECTED")})
-
-module.exports = (req, res) => app(req, res);
+module.exports = app;
