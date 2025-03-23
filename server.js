@@ -8,7 +8,7 @@ require('dotenv').config();
 // Global variables
 const app = express();
 const PORT = process.env.PORT || 3000;
-const starRoutes = require("../routes/starRoutes");
+const starRoutes = require("./routes/starRoutes");
 
 // App use
 app.use(cors());
@@ -28,5 +28,7 @@ if (process.env.NODE_ENV === "production") {
 app.get("/", (req, res) => {
     res.send("Hello from Backend!");
 });
+
+app.listen(PORT, () => {console.log("SERVER CONNECTED")})
 
 module.exports = (req, res) => app(req, res);
